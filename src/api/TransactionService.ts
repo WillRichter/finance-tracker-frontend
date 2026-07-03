@@ -29,8 +29,6 @@ async function searchTransactions(transactionQuery: TransactionSearchFormFields)
         throw data as ErrorDetails
     }
 
-    console.log(data)
-    
     return data as ApiResponseWrapper<PagedResponse<TransactionDTO>>
 }
 

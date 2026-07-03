@@ -10,6 +10,7 @@ A React frontend for the Finance Tracker API.
 - React Router
 - React Hook Form + Zod
 - Tailwind CSS
+- Phosphor Icons
 
 ## Features
 - Register and login

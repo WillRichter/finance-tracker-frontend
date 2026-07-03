@@ -29,7 +29,7 @@ export default function RegisterPage() {
             navigate("/login")
         } catch (error) {
             const errorDetails = error as ErrorDetails
-            errorDetails.messages.forEach((message, index) => {
+            errorDetails?.messages.forEach((message, index) => {
                 setError(`root.${index}` as any, { message })
             })
         }

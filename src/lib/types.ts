@@ -80,6 +80,7 @@ export interface UserContextType {
     logout: () => void
     isAuthenticated: boolean
     isLoading: boolean
+    setIsLoading: (isLoading: boolean) => void
 }
 
 export interface UseFormRegisterProps {
