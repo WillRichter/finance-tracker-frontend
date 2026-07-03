@@ -25,7 +25,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
     }
 
     return (
-        <UserContext.Provider value={{ user, setUser, setIsAuthenticated, logout, isAuthenticated, isLoading, setIsLoading }}>
+        <UserContext.Provider value={{ user, setUser, setIsAuthenticated, logout, isAuthenticated, isLoading }}>
             {children}
         </UserContext.Provider>
     )

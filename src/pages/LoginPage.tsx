@@ -21,7 +21,7 @@ export default function LoginPage() {
 
     const navigate = useNavigate()
 
-    const { setUser, setIsAuthenticated, setIsLoading } = useUser()
+    const { setUser, setIsAuthenticated } = useUser()
 
     async function onFormSubmit(form: LoginFormFields) {
         try {
@@ -29,8 +29,7 @@ export default function LoginPage() {
             const me = await getCurrentUser()
             setUser(me.data)
             setIsAuthenticated(true)
-            setIsLoading(true)
-            navigate("/")
+            navigate("/", { replace: true })
         } catch (error) {
             const errorDetails = error as ErrorDetails
             errorDetails.messages.forEach((message, index) => {
