@@ -6,7 +6,7 @@ export async function fetchWithAuth(url: string, options?: RequestInit) {
         credentials: "include"
     })
 
-    if (response.status === 401) {
+    if (response.status === 401 && !url.includes("/login")) {
         queryClient.clear()
         window.location.href = "/login"
         return Promise.reject("Unauthorised")
